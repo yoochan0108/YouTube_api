@@ -19,6 +19,12 @@ fetch(resultURL)
 		json.items.map((data) => {
 			let desc = data.snippet.description;
 			desc.length > desc_len ? (desc = desc.substr(0, desc_len) + '...') : desc;
+
+			//날자값 가공
+			let date = data.snippet.publishedAt.split('T')[0];
+			date = date.split('-').join('.');
+			console.log(date);
+
 			tags += `
 				<article>
 					<h2>${
@@ -28,7 +34,7 @@ fetch(resultURL)
 					}</h2>
 					<div class='txt'>
 						<p>${desc}</p>
-						<span>${data.snippet.publishedAt}</span>
+						<span>${date}</span>
 					</div>
 					<div class='pic'>
 						<img src='${data.snippet.thumbnails.standard.url}' />
