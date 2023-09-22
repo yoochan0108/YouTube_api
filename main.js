@@ -58,9 +58,11 @@ function createPop() {
   <span class='close'>close</span>
   `;
 	document.body.append(aside);
+	document.body.style.overflow = 'hidden';
 }
 
 function removePop() {
 	const pop = document.querySelector('aside');
 	pop.remove();
+	document.body.style.overflow = 'auto';
 }
