@@ -67,6 +67,11 @@ aside .con {
   height: 100%;
   border: 1px solid #555;
 }
+aside .con iframe {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 aside .close {
   font: bold 14px/1 "arial";
   color: #fff;
