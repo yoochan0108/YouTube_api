@@ -1,1 +1,42 @@
 @import 'reset';
+
+section {
+	width: 70vw;
+	margin: 10vh auto;
+
+	article {
+		width: 100%;
+		border-top: 1px solid #bbb;
+		padding: 2rem 0px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+
+		h2 {
+			width: 28%;
+			font: 100 50px/1 'work sans', '맑은 고딕';
+			color: #555;
+		}
+		.txt {
+			width: 38%;
+			display: flex;
+			flex-wrap: wrap;
+			align-content: space-between;
+
+			p {
+				font: 1rem/1.2 'arial';
+				color: #777;
+			}
+		}
+		.pic {
+			width: 30%;
+			height: 12rem;
+
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+}
