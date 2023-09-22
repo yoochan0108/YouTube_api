@@ -13,9 +13,9 @@ const desc_len = 180;
 //beef-lettuce-tomato --> Beef Lettuce Tomato
 let text = 'beef-lettuce-tomato';
 text = text
-	.split('-')
-	.map((el) => el.charAt(0).toUpperCase() + el.slice(1))
-	.join(' ');
+	.split('-') //기존 문자열에서 -을 기준으로 배열로 분리
+	.map((el) => el.charAt(0).toUpperCase() + el.slice(1)) //분리된 문자값을 반복돌면서 첫번째 글자만 대문자변경+첫번째를 제외한 나머지 문자 이어붙임 (각단어의 첫글자만 대문자로 변경되서 배열호 반환)
+	.join(' '); //첫글자만 대문자로 변경된 단어들을 다시 빈칸으로 이어붙이기
 console.log(text);
 
 fetch(resultURL)
