@@ -10,6 +10,14 @@ const desc_len = 180;
 //일정 글자수 이상일때 글짜자르고 말줄임표 붙이기
 //문자열.substr(시작위치,자를 글자수)
 
+//beef-lettuce-tomato --> Beef Lettuce Tomato
+let text = 'beef-lettuce-tomato';
+text = text
+	.split('-')
+	.map((el) => el.charAt(0).toUpperCase() + el.slice(1))
+	.join(' ');
+console.log(text);
+
 fetch(resultURL)
 	.then((data) => data.json())
 	.then((json) => {
@@ -23,7 +31,6 @@ fetch(resultURL)
 			//날자값 가공
 			let date = data.snippet.publishedAt.split('T')[0];
 			date = date.split('-').join('.');
-			console.log(date);
 
 			tags += `
 				<article>
